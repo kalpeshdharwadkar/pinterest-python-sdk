@@ -1,0 +1,15 @@
+name: "CodeQL config for Python code"
+paths:
+  - pinterest/
+paths-ignore: 
+  - '**/integration_tests/**'
+  - '**/test/**'
+  - '**/tests/**'
+  - '**/*_tests.py'
+queries:
+  - uses: security-extended
+query-filters:
+  - exclude:
+      problem.severity:
+        - warning
+        - recommendation
